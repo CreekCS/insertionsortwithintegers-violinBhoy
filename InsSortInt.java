@@ -24,7 +24,13 @@ public class InsSortInt {
     }
 
     //sort algorithm now
-    for (int i  = 1; i < nums.length; i++) {
+    insertion(nums);
+    System.out.println(nums[0]);
+    System.out.println(nums[nums.length-1]);
+    }
+
+    public static void insertion(int nums[]) {
+        for (int i  = 1; i < nums.length; i++) {
         int index = i;
         while (index-1 >= 0 && nums[index] < nums[index-1]) {
             int tmp = nums[index-1];
@@ -32,9 +38,6 @@ public class InsSortInt {
             nums[index] = tmp;
             index--;
         }
-    }
-    for (int val: nums) {
-        System.out.println(val);
-    }
+        }   
     }
 }
